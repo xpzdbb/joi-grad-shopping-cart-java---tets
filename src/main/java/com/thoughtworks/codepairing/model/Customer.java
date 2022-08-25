@@ -1,5 +1,5 @@
 package com.thoughtworks.codepairing.model;
-
+//顾客类
 public class Customer {
     private String name;
 
