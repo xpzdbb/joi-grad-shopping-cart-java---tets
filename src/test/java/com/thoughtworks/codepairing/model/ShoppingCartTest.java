@@ -21,7 +21,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void shouldCalculatePriceWithNoDiscount() {
+    public void shouldCalculatePriceWithNoDiscount() {//测试无折扣商品的价格
         List<Product> products = asList(new Product(PRICE, "", PRODUCT));
         ShoppingCart cart = new ShoppingCart(customer, products);
         Order order = cart.checkout();
@@ -30,7 +30,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void shouldCalculateLoyaltyPointsWithNoDiscount() {
+    public void shouldCalculateLoyaltyPointsWithNoDiscount() {//测试无折扣商品可以获得的积分数量
         List<Product> products = asList(new Product(PRICE, "", PRODUCT));
         ShoppingCart cart = new ShoppingCart(customer, products);
         Order order = cart.checkout();
@@ -39,7 +39,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void shouldCalculatePriceFor10PercentDiscount() {
+    public void shouldCalculatePriceFor10PercentDiscount() {//测试九折商品的价格
         List<Product> products = asList(new Product(PRICE, "DIS_10_ABCD", PRODUCT));
         ShoppingCart cart = new ShoppingCart(customer, products);
         Order order = cart.checkout();
@@ -48,7 +48,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void shouldCalculateLoyaltyPointsFor10PercentDiscount() {
+    public void shouldCalculateLoyaltyPointsFor10PercentDiscount() {//测试九折扣商品可以获得的积分数量（注意是按照商品总价算的积分，不是折扣后的价格）
         List<Product> products = asList(new Product(PRICE, "DIS_10_ABCD", PRODUCT));
         ShoppingCart cart = new ShoppingCart(customer, products);
         Order order = cart.checkout();
@@ -57,7 +57,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void shouldCalculatePriceFor15PercentDiscount() {
+    public void shouldCalculatePriceFor15PercentDiscount() {//测试85折商品的价格
         List<Product> products = asList(new Product(PRICE, "DIS_15_ABCD", PRODUCT));
         ShoppingCart cart = new ShoppingCart(customer, products);
         Order order = cart.checkout();
@@ -66,7 +66,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void shouldCalculateLoyaltyPointsFor15PercentDiscount() {
+    public void shouldCalculateLoyaltyPointsFor15PercentDiscount() {//测试85折扣商品可以获得的积分数量（注意是按照商品总价算的积分，不是折扣后的价格）
         List<Product> products = asList(new Product(PRICE, "DIS_15_ABCD", PRODUCT));
         ShoppingCart cart = new ShoppingCart(customer, products);
         Order order = cart.checkout();
